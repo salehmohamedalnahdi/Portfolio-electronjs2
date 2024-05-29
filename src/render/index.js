@@ -14,7 +14,8 @@ onload= async() => {
     email.innerHTML+=result[0].email
     achievement.forEach((data)=>{
     let container=`<li id="title">title: ${data.title}</li>
-    <li>Discription: ${data.content}</li>`
+    <small><li>Discription: ${data.content}</li>
+    </small>`
     list.innerHTML+=container
     })
   };
