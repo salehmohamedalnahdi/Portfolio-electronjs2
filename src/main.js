@@ -14,7 +14,7 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     createWindow()
-    Menu.setApplicationMenu(null)
+    //Menu.setApplicationMenu(null)
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
       })

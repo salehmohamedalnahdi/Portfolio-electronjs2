@@ -645,8 +645,6 @@ li {
   margin-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 #title {

@@ -5,15 +5,17 @@ onload= async() => {
     const age=document.getElementById('age')
     const email=document.getElementById('email')
     
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const response = await fetch('https://personal-portfolio-backend-9t80.onrender.com/users');
     const result = await response.json();
-    name.innerHTML+=result[0].title
-    age.innerHTML+=result[0].title
-    email.innerHTML+=result[0].title
-    result.forEach((data)=>{
-    let content=`<li id="title">title: ${data.title}</li>
-    <li>Discription: ${data.title}</li>`
-    list.innerHTML+=content
+    const achievement= await result[0].achievements
+    console.log(achievement)
+    name.innerHTML+=result[0].name
+    age.innerHTML+=result[0].age
+    email.innerHTML+=result[0].email
+    achievement.forEach((data)=>{
+    let container=`<li id="title">title: ${data.title}</li>
+    <li>Discription: ${data.content}</li>`
+    list.innerHTML+=container
     })
   };
 
