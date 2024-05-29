@@ -1,5 +1,5 @@
 console.log("working;")
-const { app, BrowserWindow ,ipcMain} = require('electron')
+const { app, BrowserWindow ,Menu} = require('electron')
 const path=require("path")
 const url=require("url")
 
@@ -14,6 +14,7 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     createWindow()
+    Menu.setApplicationMenu(null)
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
       })
